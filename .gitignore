@@ -1,0 +1,7 @@
+target
+data
+*.iml
+.idea/
+stacktrace.log
+out/
+        
