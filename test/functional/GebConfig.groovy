@@ -18,6 +18,9 @@ driver = {
 
 environments {
 
+    def port = 8080
+    baseUrl = "http://localhost:${port}"
+
 	// run as “grails -Dgeb.env=chrome test-app”
 	// See: http://code.google.com/p/selenium/wiki/ChromeDriver
 	chrome {
