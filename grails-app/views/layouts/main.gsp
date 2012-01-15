@@ -19,6 +19,7 @@
                 <r:layoutResources />
             </div>
           	<div class="clear"></div>
+            <g:render template="../parts/footer" />
         </div>
     </body>
 </html>
