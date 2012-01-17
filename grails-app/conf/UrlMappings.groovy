@@ -8,6 +8,7 @@ class UrlMappings {
 		}
 
 		"/"(controller:'homePage', action: 'index')
+        name contact: "/contact"(controller:'homePage', action: 'contact')
 
         "/login/$action"(controller: 'login')
         "/logout/$action"(controller: 'logout')
