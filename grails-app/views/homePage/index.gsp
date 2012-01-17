@@ -14,5 +14,8 @@
 		  <div class="image">
 		  </div>
 	  </div><!-- End #headline -->
+      <div id="content">
+
+      </div>
   </body>
 </html>
