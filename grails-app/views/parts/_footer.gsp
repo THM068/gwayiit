@@ -2,7 +2,7 @@
     <div class="text">
 
         <div class="links">
-            <a href="#">Home</a> | <a href="#">Products</a> | <a href="#">Services</a> | <a href="#">About Us</a> | <a href="#">Recent News</a> | <a href="#">Contact Us</a>
+            <g:link mapping="home">Home</g:link> | <g:link mapping="products">Products</g:link> | <g:link mapping="services">Services</g:link> | <g:link mapping="aboutUs">About Us</g:link> | <g:link mapping="recentNews">Recent News</g:link> | <g:link mapping="contactUs">Contact Us</g:link>
         </div>
         <div class="copyright">&copy; Copyright Gwayi IT Solutions</div>
     </div>
