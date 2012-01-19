@@ -104,7 +104,3 @@ grails.gorm.default.mapping = {
 	"user-type" type: org.joda.time.contrib.hibernate.PersistentPeriod, class: org.joda.time.Period
 }
 
-// Added by the Spring Security Core plugin:
-grails.plugins.springsecurity.userLookup.userDomainClassName = 'com.gwayiit.SecUser'
-grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.gwayiit.SecUserSecRole'
-grails.plugins.springsecurity.authority.className = 'com.gwayiit.SecRole'
