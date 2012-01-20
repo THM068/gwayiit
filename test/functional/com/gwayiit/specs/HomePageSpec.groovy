@@ -29,6 +29,20 @@ class HomePageSpec extends GebSpec {
             phone.displayed
             comment.displayed
             submitButton.displayed
+    }
 
+    def "Navigation links when clicked display correct view" () {
+        when:
+            to HomePage
+        then:
+            waitFor { at HomePage }
+
+        and:
+            navigation.homeLink.displayed
+            navigation.teamLink.displayed
+            navigation.aboutUsLink.displayed
+            navigation.recentNewsLink.displayed
+            navigation.contactUsLink.displayed
+            navigation.productsLink.displayed
     }
 }
