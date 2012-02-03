@@ -11,5 +11,14 @@ class GwayiitTagLibSpec extends TagLibSpec {
             name = 'thando mafela'
     }
 
+    def "render the next button"() {
+        when:
+            def output = tagLib.nextButton(className: className , {} ).toString()
+        then:
+            tagLib.renderArgs.template == '/parts/nextButton'
+            tagLib.renderArgs.model.className == 'step1'
+        where:
+            className = 'step1'
+    }
 
 }
