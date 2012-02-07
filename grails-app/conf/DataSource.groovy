@@ -1,8 +1,24 @@
 dataSource {
-    pooled = true
-    driverClassName = "org.hsqldb.jdbcDriver"
-    username = "sa"
-    password = ""
+	pooled = true
+	dialect = 'org.hibernate.dialect.MySQLInnoDBDialect'
+	driverClassName = 'com.mysql.jdbc.Driver'
+	username = 'root'
+	password = 'zinzilee'
+
+	properties {
+		maxActive = 50
+		maxIdle = 25
+		minIdle = 5
+		initialSize = 5
+		minEvictableIdleTimeMillis = 1000 * 60 * 5
+		timeBetweenEvictionRunsMillis = 1000 * 60 * 5
+		maxWait = 1200000
+		testOnBorrow = true
+		testWhileIdle = true
+		testOnReturn = false
+		validationQuery = 'SELECT 1'
+	}
+
 }
 hibernate {
     cache.use_second_level_cache = true
@@ -13,8 +29,18 @@ hibernate {
 environments {
     development {
         dataSource {
-            dbCreate = "create-drop" // one of 'create', 'create-drop','update'
-            url = "jdbc:hsqldb:mem:devDB"
+            dialect = "org.hibernate.dialect.MySQL5InnoDBDialect"
+            url = 'jdbc:mysql://localhost:3306/gwayidb_dev?autoReconnect=true'
+        }
+    }
+    dbdiff {
+        dataSource {
+            dbCreate = "create-drop"
+            url = "jdbc:mysql://localhost/gwayi_diff"
+            driverClassName = "com.mysql.jdbc.Driver"
+            username = "root"
+            password = "zinzilee"
+            dialect = "org.hibernate.dialect.MySQL5InnoDBDialect"
         }
     }
     test {
@@ -25,8 +51,7 @@ environments {
     }
     production {
         dataSource {
-            dbCreate = "update"
-            url = "jdbc:hsqldb:file:prodDb;shutdown=true"
+            url = 'jdbc:mysql://localhost:3306/gwayidb?autoReconnect=true'
         }
     }
 }
