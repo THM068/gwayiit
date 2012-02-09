@@ -51,6 +51,7 @@ environments {
     }
     production {
         dataSource {
+            dbCreate = "update"
             url = 'jdbc:mysql://localhost:3306/gwayidb?autoReconnect=true'
         }
     }
